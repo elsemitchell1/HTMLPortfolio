@@ -1,0 +1,55 @@
+body {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.text-gradient, .text-gradient-hover:hover {
+    background-image: linear-gradient(to right, #FFA500, #FFFF00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.navbar {
+    display: flex;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.nav-heading {
+    font-size: 2.2rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu-item a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-active {
+    border-bottom: 2px solid white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    color: white;
+}
