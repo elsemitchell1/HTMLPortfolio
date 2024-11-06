@@ -31,7 +31,7 @@
 .hero-img-container {
     width: 500px;
     height: 500px;
-    overflow: hidden;
+    position: relative;
 }
 
 .hero-img {
@@ -39,6 +39,39 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.hero-img-container::after, .hero-img-container::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(from var(--angle), #FFA500, #FFFF00, #FFA500);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    border-radius: 50%;
+    animation: 1.5s spin linear infinite;
+}
+
+.hero-img-container::before {
+    filter: blur(1rem);
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    } to {
+        --angle: 360deg;
+    }
 }
 
 @keyframes typing-bar {
