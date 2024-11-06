@@ -21,6 +21,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: auto;
+    padding: 0 20px;
 }
 
 .nav-heading {
@@ -49,7 +50,67 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 1400px;
-    width: 100%;
+    width: 95vw;
     margin: auto;
     color: white;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.footer-container {
+    margin: auto;
+    max-width: 1400px;
+    width: 100%;
+    color: white;
+}
+
+.footer-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 45px;
+}
+
+.footer-container hr {
+    border: none;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(to right, #FFA500, #FFFF00);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 380px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form h3 {
+    font-size: 2rem;
+}
+
+.upper-contact {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.lower-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }

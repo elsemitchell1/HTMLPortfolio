@@ -9,7 +9,8 @@
 }
 
 .hero-content {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
 }
 
 .hero-heading {
@@ -20,6 +21,7 @@
 .hero-secondHeading {
     font-size: 2rem;
     margin-top: -30px;
+    padding-right: 5px;
 }
 
 .hero-paragraph {
@@ -37,4 +39,31 @@
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+@keyframes typing-bar {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 38px;
+    background: white;
+    animation: typing-bar 1.2s infinite;
+}
+
+.hero-secondHeading-container {
+    position: relative;
+    width: fit-content;
 }
