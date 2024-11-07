@@ -3,7 +3,7 @@
     max-width: 900px;
     height: fit-content;
     color: white;
-    margin: 20px auto;
+    margin: 30px auto;
     position: relative;
 }
 
@@ -73,7 +73,7 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    height: 120%;
+    height: 130%;
     width: 2px;
     background: white;
 }

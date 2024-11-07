@@ -1,6 +1,6 @@
 .skill-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     width: 100%;
     color: white;
