@@ -54,12 +54,21 @@ const allSkills = [
 let mainSection = document.getElementById("main-content");
 let templateWrapper = document.createElement("div");
 templateWrapper.classList.add("skill-wrapper");
-fetch("../htmlcomponents/skill.html")
+/*fetch("../htmlcomponents/skill.html")
     .then(response => response.text())
-    .then(data => {
+    .then(data => {*/
         allSkills.map(skills => {
             let template = document.createElement("div");
-            template.innerHTML = data;
+            template.innerHTML = `
+                <div class="skill-container">
+                    <div class="skill-box">
+                        <div class="skill-content">
+                            <h3 class="skill-heading"></h3>
+                            <div class="skill-grid">
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
 
             function createSkills(template, skillList){
                 template.querySelector(".skill-heading").innerHTML = skills.heading;
@@ -77,4 +86,4 @@ fetch("../htmlcomponents/skill.html")
             createSkills(template, skills.skills);
             mainSection.appendChild(templateWrapper);
         })
-    })
+    //})

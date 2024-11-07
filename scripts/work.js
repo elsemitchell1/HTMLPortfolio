@@ -11,12 +11,25 @@ const workHistory = [
 ]
 //fetch work component
 let mainSection = document.getElementById("main-content");
-fetch("../htmlcomponents/timeline.html")
+/*fetch("../htmlcomponents/timeline.html")
     .then(response => response.text())
-    .then(data => {
+    .then(data => {*/
         workHistory.map(work => {
             let template = document.createElement("div");
-            template.innerHTML = data;
+            template.innerHTML = `
+                <div class="timeline-container">
+                    <div class="timeline-content-container">
+                        <div class="timeline-content">
+                            <div class="timeline-content-wrapper">
+                                <h3 class="timeline-heading"></h3>
+                                <h5 class="timeline-date text-gradient"></h5>
+                                <p class="timeline-paragraph"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rule"></div>
+                    <div class="pointer"></div>
+                </div>`;
 
             function createWork(template, work){
                 template.querySelector(".timeline-container").style.flexDirection = work.id % 2 ? "row" : "row-reverse";
@@ -27,4 +40,4 @@ fetch("../htmlcomponents/timeline.html")
             }
             createWork(template, work);
         })
-    })
+    //})
