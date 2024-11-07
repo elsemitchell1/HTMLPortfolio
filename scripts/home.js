@@ -21,13 +21,26 @@ function typeWords(element){
 }
 //fetch hero component
 let mainSection = document.getElementById("main-content");
-fetch("../htmlcomponents/hero.html")
+/*fetch("../htmlcomponents/hero.html")
     .then(response => response.text())
-    .then(data => {
+    .then(data => {*/
+    const herotemplate = `
+    <div class="hero-container">
+    <div class="hero-content">
+        <h2 class="hero-heading"></h2>
+        <div class="hero-secondHeading-container">
+            <h3 class="hero-secondHeading text-gradient"></h3>
+        </div> 
+        <p class="hero-paragraph"></p>
+    </div>
+    <div class="hero-img-container">
+        <img class="hero-img" />
+    </div>
+</div>`
         let template1 = document.createElement("div");
         let template2 = document.createElement("div");
-        template1.innerHTML = data;
-        template2.innerHTML = data;
+        template1.innerHTML = herotemplate;
+        template2.innerHTML = herotemplate;
 
         function createHero(template, headingText, secondHeading, paragraph, image, alt, reverse){
             template.querySelector(".hero-container").style.flexDirection = reverse ? "row-reverse" : "row";
@@ -66,4 +79,4 @@ fetch("../htmlcomponents/hero.html")
         var hero2Alt = "Australia Map";
         createHero(template1, hero1Heading, hero1SecondHeading, hero1Paragraph, hero1Image, hero1Alt, false);
         createHero(template2, hero2Heading, hero2SecondHeading, hero2Paragraph, hero2Image, hero2Alt, true);
-    })
+    //})
