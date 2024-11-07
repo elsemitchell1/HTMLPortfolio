@@ -64,7 +64,7 @@ let mainSection = document.getElementById("main-content");
         with innovative solutions. My passion for coding and continuous 
         learning drives me to excel in creating dynamic and user-friendly 
         web applications.`;
-        var hero1Image = "../images/FamilyPortrait.png";
+        var hero1Image = "images/FamilyPortrait.png";
         var hero1Alt = "Family Photo";
 
         var hero2Heading = "Backstory";
@@ -75,7 +75,7 @@ let mainSection = document.getElementById("main-content");
         After almost 10 years of experience in metal fabrication I am 
         pursuing a new career path, utilising my problem solving skills 
         in web development.`;
-        var hero2Image = "../images/australia.jpg";
+        var hero2Image = "images/australia.jpg";
         var hero2Alt = "Australia Map";
         createHero(template1, hero1Heading, hero1SecondHeading, hero1Paragraph, hero1Image, hero1Alt, false);
         createHero(template2, hero2Heading, hero2SecondHeading, hero2Paragraph, hero2Image, hero2Alt, true);
