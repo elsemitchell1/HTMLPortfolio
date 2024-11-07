@@ -1,58 +1,41 @@
-//navbar html fetch
-/*fetch("../htmlcomponents/navbar.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-        
-        const currentPage = window.location.pathname.split("/").pop();
-        const links = document.querySelectorAll("nav a");
-        links.forEach(link => {
-            if(link.getAttribute("href")=== currentPage){
-                link.classList.add("nav-active","text-gradient");
-            }else{
-                link.style.color = "white";
-            }
-        })
-    });
-*/
+//navbar component
 document.getElementById("navbar"). innerHTML = `
     <div class="nav-container">
         <h1 class="nav-heading text-gradient">Mitchell's HTML Portfolio</h1>
-        <ul class="nav-menu" id="nav-menu">
-            <li class="nav-menu-item">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="nav-menu-item">
-                <a href="work.html">Work</a>
-            </li>
-            <li class="nav-menu-item">
-                <a href="skills.html">Skills</a>
-            </li>
-            <li class="nav-menu-item">
-                <a href="resume.html">Resume</a>
-            </li>
-            <li class="nav-menu-item">
-                <a href="projects.html">Projects</a>
-            </li>
-        </ul>
+        <button id="hamburger" class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div id="nav-menu-wrapper" class="nav-menu-wrapper">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="work.html">Work</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="skills.html">Skills</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="resume.html">Resume</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="projects.html">Projects</a>
+                </li>
+            </ul>
+        </div>
     </div>`
-//footer html fetch
-/*fetch("../htmlcomponents/footer.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("footer").innerHTML = data;
-        
-        const currentPage = window.location.pathname.split("/").pop();
-        const links = document.querySelectorAll("nav a");
-        links.forEach(link => {
-            if(link.getAttribute("href")=== currentPage){
-                link.classList.add("nav-active","text-gradient");
-            }else{
-                link.style.color = "white";
-            }
-        })
-    });
-*/
+
+const hamburger = document.getElementById('hamburger');
+const navMenuWrapper = document.getElementById('nav-menu-wrapper');
+    
+hamburger.addEventListener('click', () => {
+    navMenuWrapper.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+//footer component
 document.getElementById("footer").innerHTML = `
     <div class="footer-container">
         <nav class="footer-nav">

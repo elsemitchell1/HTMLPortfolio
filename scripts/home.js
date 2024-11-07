@@ -25,18 +25,18 @@ let mainSection = document.getElementById("main-content");
     .then(response => response.text())
     .then(data => {*/
     const herotemplate = `
-    <div class="hero-container">
-    <div class="hero-content">
-        <h2 class="hero-heading"></h2>
-        <div class="hero-secondHeading-container">
-            <h3 class="hero-secondHeading text-gradient"></h3>
-        </div> 
-        <p class="hero-paragraph"></p>
-    </div>
-    <div class="hero-img-container">
-        <img class="hero-img" />
-    </div>
-</div>`
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2 class="hero-heading"></h2>
+                <div class="hero-secondHeading-container">
+                    <h3 class="hero-secondHeading text-gradient"></h3>
+                </div> 
+                <p class="hero-paragraph"></p>
+            </div>
+            <div class="hero-img-container">
+                <img class="hero-img" />
+            </div>
+        </div>`
         let template1 = document.createElement("div");
         let template2 = document.createElement("div");
         template1.innerHTML = herotemplate;
