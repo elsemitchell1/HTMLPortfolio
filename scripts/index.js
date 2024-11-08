@@ -79,10 +79,11 @@ document.getElementById("footer").innerHTML = `
         <hr/>
         <p>&copy 2024 Mitchell Else</p>
     </div>`
-const currentPage = window.location.pathname.split("/").pop();
+let currentPage = window.location.pathname.split("/").pop();
+currentPage == '' ? currentPage = 'index.html' : currentPage = currentPage;
 const links = document.querySelectorAll("nav a");
 links.forEach(link => {
-    if(link.getAttribute("href")=== currentPage){
+    if(link.getAttribute("href") === currentPage){
         link.classList.add("nav-active","text-gradient");
     }else{
         link.style.color = "white";

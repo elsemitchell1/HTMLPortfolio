@@ -11,7 +11,7 @@
 .skill-container {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    max-width: 500px;
     position: relative;
     margin: 40px;
 }
@@ -82,4 +82,14 @@
 
 .skill-name {
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px){
+    .skill-grid i {
+        font-size: 30px;
+    }
+    
+    .skill-name {
+        font-size: 1rem;
+    }
 }

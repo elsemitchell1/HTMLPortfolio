@@ -101,3 +101,34 @@
     position: relative;
     width: fit-content;
 }
+
+@media screen and (max-width: 1024px) {
+    .hero-content {
+        width: 90%;
+    }
+
+    .hero-heading {
+        margin-top: -50;
+        font-size: 2.5rem;
+    }
+    
+    .hero-secondHeading {
+        font-size: 1.5rem;
+        margin-top: -18px;
+    }
+    
+    .hero-paragraph {
+     line-height: 1.5;
+    }
+
+    .hero-img-container {
+        width: 300px;
+        height: 300px;
+        position: relative;
+    }
+
+    .hero-img-container::after, .hero-img-container::before {
+        width: 300px;
+        height: 300px;
+    }
+}

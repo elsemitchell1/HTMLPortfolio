@@ -88,3 +88,29 @@
     border-radius: 50%;
     background-image: linear-gradient(to right, #FFA500, #FFFF00);
 }
+
+@media screen and (max-width: 1024px){
+    .timeline-container {
+        justify-content: center;
+        margin: 60px auto;
+    }
+
+    .timeline-content-container {
+        max-width: 400px;
+        margin: 0 30px;
+    }
+
+    .rule {
+        height: 150%;
+        z-index: -1;
+    }
+    
+    .pointer {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        translate: -50% -170%;
+        height: 25px;
+        width: 25px;
+    }
+}
