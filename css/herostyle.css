@@ -132,4 +132,8 @@
         width: 300px;
         height: 300px;
     }
+
+    .cursor {
+        height: 26px;
+    }
 }
