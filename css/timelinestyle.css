@@ -11,6 +11,7 @@
     position: relative;
     width: 400px;
     height: fit-content;
+    border-radius: 10px;
 }
 
 .timeline-content {

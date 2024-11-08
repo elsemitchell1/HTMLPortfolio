@@ -33,6 +33,7 @@
     width: 500px;
     height: 500px;
     position: relative;
+    border-radius: 50%;
 }
 
 .hero-img {

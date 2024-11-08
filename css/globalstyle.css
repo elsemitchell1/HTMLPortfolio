@@ -129,6 +129,7 @@ body {
     color: white;
     position: relative;
     margin: 50px auto;
+    border-radius: 10px;
 }
 
 .footer {
