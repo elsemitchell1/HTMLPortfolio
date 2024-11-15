@@ -1,0 +1,230 @@
+.projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 0;
+    gap: 40px;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    } to {
+        --angle: 360deg;
+    }
+}
+
+.project-card {
+    width: 280px;
+    height: clamp(450px, 450px, fit-content);
+    position: relative;
+}
+
+.project-card::after, .project-card::before {
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), #FFA500, #FFFF00, #FFA500);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 5px;
+    animation: 1.5s spin linear infinite;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.project-card::before {
+    filter: blur(1rem);
+}
+
+.project-link {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    width: inherit;
+    height: inherit;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+}
+
+.project-img {
+    overflow: hidden;
+    height: 190px;
+    border-radius: 10px;
+}
+
+.project-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.project-skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.7rem;
+    margin: 10px 0 0 0;
+}
+
+.project-skill-container {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: -10px 10px;
+}
+
+.project-info p {
+    margin: auto 0;
+    font-size: 0.99rem;
+}
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0 0 8px 8px;
+    padding: 8px;
+    margin: -1px 0 0 0;
+}
+
+.comment-section {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    border: solid 1px black;
+    border-style: solid none;
+    max-height: 55px;
+    overflow: scroll;
+}
+
+.comments-toggle {
+    margin: 5px auto 5px 0;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.add-comment-btn {
+    background: black;
+    color: white;
+    border: none;
+    width: 100%;
+    margin: 5px 0 0 0;
+    padding: 6px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.comment-container {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.comment-container h5 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.comment-container p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+}
+
+.add-comment-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+.add-comment-card {
+    position: relative;
+    width: 280px;
+    padding: 10px;
+    background: linear-gradient(to right, #FFA500, #FFFF00);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-comment-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.add-comment-heading h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 8px auto;
+}
+
+.exit-btn {
+    position: absolute;
+    top: 5px; 
+    right: 5px; 
+    background: transparent;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%; 
+    margin: 8px auto; 
+    font-size: 0.875rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 3px;
+}
+
+.comment-form textarea {
+    resize: none;
+}
+
+.comment-form button {
+    width: 100%; 
+    background-color: white; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    padding: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.comment-form button:hover {
+    transform: scale(1.05); 
+}
